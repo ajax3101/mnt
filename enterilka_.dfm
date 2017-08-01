@@ -1,0 +1,569 @@
+object enterilka: Tenterilka
+  Left = 228
+  Top = 170
+  AutoSize = True
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Расчет'
+  ClientHeight = 373
+  ClientWidth = 669
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Visible = True
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 0
+    Top = 0
+    Width = 22
+    Height = 13
+    Caption = 'Имя'
+  end
+  object Label2: TLabel
+    Left = 428
+    Top = 0
+    Width = 35
+    Height = 13
+    Caption = 'Группа'
+  end
+  object Label3: TLabel
+    Left = 540
+    Top = 0
+    Width = 26
+    Height = 13
+    Caption = 'Дата'
+  end
+  object Label42: TLabel
+    Left = 372
+    Top = 236
+    Width = 147
+    Height = 13
+    Caption = 'Время разгона эл.двигателя'
+  end
+  object Label43: TLabel
+    Left = 372
+    Top = 256
+    Width = 64
+    Height = 13
+    Caption = 'Время счета'
+  end
+  object Label44: TLabel
+    Left = 640
+    Top = 238
+    Width = 6
+    Height = 13
+    Caption = 'c'
+  end
+  object Label45: TLabel
+    Left = 640
+    Top = 258
+    Width = 6
+    Height = 13
+    Caption = 'c'
+  end
+  object fio_edit: TEdit
+    Left = 0
+    Top = 16
+    Width = 417
+    Height = 21
+    TabOrder = 0
+    Text = 'Иванов И.И.'
+  end
+  object Edit2: TEdit
+    Left = 428
+    Top = 16
+    Width = 105
+    Height = 21
+    TabOrder = 1
+    Text = 'М-514'
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 40
+    Width = 353
+    Height = 333
+    Caption = 'Исходные данные'
+    TabOrder = 3
+    object a13: TLabel
+      Left = 312
+      Top = 308
+      Width = 6
+      Height = 13
+      Caption = 'c'
+    end
+    object a12: TLabel
+      Left = 312
+      Top = 284
+      Width = 8
+      Height = 13
+      Caption = 'H'
+    end
+    object a11: TLabel
+      Left = 312
+      Top = 260
+      Width = 19
+      Height = 13
+      Caption = 'm/c'
+    end
+    object a10: TLabel
+      Left = 312
+      Top = 236
+      Width = 8
+      Height = 13
+      Caption = 'm'
+    end
+    object a9: TLabel
+      Left = 312
+      Top = 212
+      Width = 21
+      Height = 13
+      Caption = 'Mпа'
+    end
+    object a8: TLabel
+      Left = 312
+      Top = 188
+      Width = 20
+      Height = 13
+      Caption = 'm*m'
+    end
+    object a7: TLabel
+      Left = 312
+      Top = 164
+      Width = 20
+      Height = 13
+      Caption = 'Н*м'
+    end
+    object a6: TLabel
+      Left = 312
+      Top = 140
+      Width = 24
+      Height = 13
+      Caption = 'кг/m'
+    end
+    object a5: TLabel
+      Left = 312
+      Top = 116
+      Width = 24
+      Height = 13
+      Caption = 'кг/m'
+    end
+    object a4: TLabel
+      Left = 312
+      Top = 92
+      Width = 8
+      Height = 13
+      Caption = 'm'
+    end
+    object a1: TLabel
+      Left = 312
+      Top = 20
+      Width = 35
+      Height = 13
+      Caption = 'кг*м*м'
+    end
+    object cc1: TLabel
+      Left = 12
+      Top = 20
+      Width = 205
+      Height = 13
+      Caption = '1. Момент инерции ротора эл-двигателя'
+    end
+    object cc2: TLabel
+      Left = 12
+      Top = 44
+      Width = 171
+      Height = 13
+      Caption = '2. Передаточное число редуктора'
+    end
+    object cc3: TLabel
+      Left = 12
+      Top = 68
+      Width = 97
+      Height = 13
+      Caption = '3. К П Д редуктора'
+    end
+    object cc4: TLabel
+      Left = 12
+      Top = 92
+      Width = 216
+      Height = 13
+      Caption = '4. Диаметр делительн. окружн. звездочки'
+    end
+    object cc5: TLabel
+      Left = 12
+      Top = 116
+      Width = 127
+      Height = 13
+      Caption = '5. Погонная масса груза'
+    end
+    object cc6: TLabel
+      Left = 12
+      Top = 140
+      Width = 219
+      Height = 13
+      Caption = '6. Погонная масса движ.частей конвейера'
+    end
+    object cc7: TLabel
+      Left = 12
+      Top = 164
+      Width = 208
+      Height = 13
+      Caption = '7. Номинальный момент на валу эл.двиг'
+    end
+    object cc8: TLabel
+      Left = 12
+      Top = 188
+      Width = 187
+      Height = 13
+      Caption = '8. Площадь сечения цепи конвейера'
+    end
+    object cc9: TLabel
+      Left = 12
+      Top = 212
+      Width = 130
+      Height = 13
+      Caption = '9. Модуль упругости цепи'
+    end
+    object cc10: TLabel
+      Left = 12
+      Top = 236
+      Width = 108
+      Height = 13
+      Caption = '10. Длина конвейера'
+    end
+    object cc11: TLabel
+      Left = 12
+      Top = 260
+      Width = 176
+      Height = 13
+      Caption = '11. Скорость движения конвейера'
+    end
+    object cc12: TLabel
+      Left = 12
+      Top = 284
+      Width = 233
+      Height = 13
+      Caption = '12. Суммарное сопротивление движен. цепи  '
+    end
+    object cc13: TLabel
+      Left = 12
+      Top = 308
+      Width = 224
+      Height = 13
+      Caption = '13. Шаг по времени динамического расчета'
+    end
+    object c13: TEdit
+      Left = 248
+      Top = 304
+      Width = 57
+      Height = 21
+      TabOrder = 12
+      Text = '0,2'
+    end
+    object c12: TEdit
+      Left = 248
+      Top = 280
+      Width = 57
+      Height = 21
+      TabOrder = 11
+      Text = '10030'
+    end
+    object c11: TEdit
+      Left = 248
+      Top = 256
+      Width = 57
+      Height = 21
+      TabOrder = 10
+      Text = '0,16'
+    end
+    object c10: TEdit
+      Left = 248
+      Top = 232
+      Width = 57
+      Height = 21
+      TabOrder = 9
+      Text = '18,9'
+    end
+    object c9: TEdit
+      Left = 248
+      Top = 208
+      Width = 57
+      Height = 21
+      TabOrder = 8
+      Text = '1,8e+5'
+    end
+    object c8: TEdit
+      Left = 248
+      Top = 184
+      Width = 57
+      Height = 21
+      TabOrder = 7
+      Text = '0,0051'
+    end
+    object c7: TEdit
+      Left = 248
+      Top = 160
+      Width = 57
+      Height = 21
+      TabOrder = 6
+      Text = '17'
+    end
+    object c6: TEdit
+      Left = 248
+      Top = 136
+      Width = 57
+      Height = 21
+      TabOrder = 5
+      Text = '30'
+    end
+    object c5: TEdit
+      Left = 248
+      Top = 112
+      Width = 57
+      Height = 21
+      TabOrder = 4
+      Text = '172'
+    end
+    object c4: TEdit
+      Left = 248
+      Top = 88
+      Width = 57
+      Height = 21
+      TabOrder = 3
+      Text = '0,5'
+    end
+    object c3: TEdit
+      Left = 248
+      Top = 64
+      Width = 57
+      Height = 21
+      TabOrder = 2
+      Text = '0,85'
+    end
+    object c2: TEdit
+      Left = 248
+      Top = 40
+      Width = 57
+      Height = 21
+      TabOrder = 1
+      Text = '238'
+    end
+    object c1: TEdit
+      Left = 248
+      Top = 16
+      Width = 57
+      Height = 21
+      TabOrder = 0
+      Text = '0,029'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 356
+    Top = 40
+    Width = 313
+    Height = 189
+    Caption = 'Расчетные величины'
+    Enabled = False
+    TabOrder = 4
+    object rr1: TLabel
+      Left = 16
+      Top = 20
+      Width = 89
+      Height = 13
+      Caption = '1.Ведущая масса'
+    end
+    object rr2: TLabel
+      Left = 16
+      Top = 44
+      Width = 89
+      Height = 13
+      Caption = '2.Ведомая масса'
+    end
+    object rr3: TLabel
+      Left = 16
+      Top = 68
+      Width = 59
+      Height = 13
+      Caption = '3.Сила тяги'
+    end
+    object rr4: TLabel
+      Left = 16
+      Top = 92
+      Width = 201
+      Height = 13
+      Caption = '4.Растяжение цепи в конце 1-го этапа  '
+    end
+    object rr5: TLabel
+      Left = 16
+      Top = 116
+      Width = 175
+      Height = 13
+      Caption = '5.Скорость в конце первого этапа'
+    end
+    object rr6: TLabel
+      Left = 16
+      Top = 140
+      Width = 150
+      Height = 13
+      Caption = '6.Время первого этапа пуска'
+    end
+    object rr7: TLabel
+      Left = 16
+      Top = 164
+      Width = 160
+      Height = 13
+      Caption = '7.Максимальное усилие в цепи'
+    end
+    object aa7: TLabel
+      Left = 284
+      Top = 164
+      Width = 8
+      Height = 13
+      Caption = 'H'
+    end
+    object aa6: TLabel
+      Left = 284
+      Top = 140
+      Width = 6
+      Height = 13
+      Caption = 'c'
+    end
+    object aa5: TLabel
+      Left = 284
+      Top = 116
+      Width = 19
+      Height = 13
+      Caption = 'm/c'
+    end
+    object aa4: TLabel
+      Left = 284
+      Top = 92
+      Width = 8
+      Height = 13
+      Caption = 'm'
+    end
+    object aa3: TLabel
+      Left = 284
+      Top = 68
+      Width = 8
+      Height = 13
+      Caption = 'H'
+    end
+    object aa2: TLabel
+      Left = 284
+      Top = 44
+      Width = 11
+      Height = 13
+      Caption = 'кг'
+    end
+    object aa1: TLabel
+      Left = 284
+      Top = 20
+      Width = 11
+      Height = 13
+      Caption = 'кг'
+    end
+    object r1: TEdit
+      Left = 220
+      Top = 16
+      Width = 57
+      Height = 21
+      TabOrder = 0
+    end
+    object r2: TEdit
+      Left = 220
+      Top = 40
+      Width = 57
+      Height = 21
+      TabOrder = 1
+    end
+    object r3: TEdit
+      Left = 220
+      Top = 64
+      Width = 57
+      Height = 21
+      TabOrder = 2
+    end
+    object r4: TEdit
+      Left = 220
+      Top = 88
+      Width = 57
+      Height = 21
+      TabOrder = 3
+    end
+    object r5: TEdit
+      Left = 220
+      Top = 112
+      Width = 57
+      Height = 21
+      TabOrder = 4
+    end
+    object r6: TEdit
+      Left = 220
+      Top = 136
+      Width = 57
+      Height = 21
+      TabOrder = 5
+    end
+    object r7: TEdit
+      Left = 220
+      Top = 160
+      Width = 57
+      Height = 21
+      TabOrder = 6
+    end
+  end
+  object DateEdit1: TDateEdit
+    Left = 540
+    Top = 16
+    Width = 129
+    Height = 21
+    DefaultToday = True
+    NumGlyphs = 2
+    YearDigits = dyFour
+    TabOrder = 2
+    Text = '03.04.2000'
+  end
+  object Button1: TButton
+    Left = 392
+    Top = 288
+    Width = 241
+    Height = 33
+    Caption = 'Посчитать'
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+  object s1: TEdit
+    Left = 576
+    Top = 232
+    Width = 57
+    Height = 21
+    TabOrder = 6
+    Text = '0,2'
+  end
+  object s2: TEdit
+    Left = 576
+    Top = 256
+    Width = 57
+    Height = 21
+    TabOrder = 7
+    Text = '4'
+  end
+  object Button2: TButton
+    Left = 392
+    Top = 328
+    Width = 241
+    Height = 33
+    Caption = 'Отмена'
+    TabOrder = 8
+    OnClick = Button2Click
+  end
+end
